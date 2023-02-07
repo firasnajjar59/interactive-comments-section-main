@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(223deg, 19%, 93%);
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container .wrapper {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  justify-items: flex-end;
+}
+.container .wrapper .commentWrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .wrapper .chatBubbleChild {
+  width: 90%;
+  border-radius: 0.4em;
+  background-color: hsl(0deg, 0%, 100%);
+  display: flex;
+  gap: 2em;
+  padding: 1.5em;
+  margin-top: 2em;
+}
+.container .wrapper .hr {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+.container .wrapper .hr div {
+  width: 2px;
+  background-color: hsl(211deg, 10%, 45%);
+  opacity: 0.2;
+}
+.container .wrapper .chatBubble {
+  width: 100%;
+  border-radius: 0.4em;
+  background-color: hsl(0deg, 0%, 100%);
+  display: flex;
+  gap: 2em;
+  padding: 1.5em;
+}
+.container .wrapper .counter {
+  background-color: hsl(228deg, 33%, 97%);
+  padding: 0.7em 0.5em;
+  gap: 1.3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.container .wrapper .counter span {
+  color: hsl(238deg, 40%, 52%);
+  font-size: 1.2em;
+  font-weight: 700;
+}
+.container .wrapper .details {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex-grow: 1;
+}
+.container .wrapper .details .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .wrapper .details .title .left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.container .wrapper .details .title .left img {
+  width: 2.5em;
+}
+.container .wrapper .details .title .left :nth-child(2) {
+  color: hsl(212deg, 24%, 26%);
+  font-weight: 700;
+}
+.container .wrapper .details .title .left :nth-child(3) {
+  font-weight: 400;
+  color: hsl(211deg, 10%, 45%);
+}
+.container .wrapper .details .title .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.container .wrapper .details .title .right span {
+  color: hsl(238deg, 40%, 52%);
+  font-weight: 500;
+}
+.container .wrapper .details .title .right div:hover {
+  opacity: 0.5;
+}
+.container .wrapper .details .title .hover:hover {
+  opacity: 0.5;
+}
+.container .wrapper .details p {
+  color: hsl(211deg, 10%, 45%);
+  line-height: 1.5em;
+}
+.container .wrapper .details p .hashTag {
+  font-weight: 700;
+  color: hsl(238deg, 40%, 52%);
+}
+.container .wrapper .writeComment {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+  width: 100%;
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 1.5em;
+  border-radius: 0.4em;
+  justify-content: space-between;
+}
+.container .wrapper .writeComment img {
+  width: 2.5em;
+}
+.container .wrapper .writeComment textarea {
+  flex-grow: 1;
+  border-radius: 0.4em;
+  resize: none;
+  padding: 1em;
+  height: 7pc;
+  border: 1px solid rgba(103, 114, 126, 0.3);
+}
+.container .wrapper .writeComment textarea::-moz-placeholder {
+  font-size: 1.2em;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+}
+.container .wrapper .writeComment textarea:-ms-input-placeholder {
+  font-size: 1.2em;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+}
+.container .wrapper .writeComment textarea::placeholder {
+  font-size: 1.2em;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+}
+.container .wrapper .writeComment button {
+  border-radius: 0.4em;
+  padding: 1em 2.5em;
+  border: none;
+  background-color: hsl(238deg, 40%, 52%);
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1em;
+  font-weight: 700;
+}
+.container .wrapper .writeCommentChild {
+  width: 90%;
+}
+.container .margin {
+  margin-top: 2em !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.w-100 {
+  width: 100% !important;
+  display: flex;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+  .container .wrapper {
+    width: 100%;
+  }
+  .container .wrapper .details .title {
+    flex-direction: column;
+    gap: 1em;
+    align-items: flex-start;
+  }
+  .container .wrapper .commentWrapper {
+    width: 90%;
+    margin: auto;
+  }
+  .container .wrapper .writeComment {
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  .container .wrapper .writeComment textarea {
+    width: 50%;
+  }
+  .container .wrapper .writeComment button {
+    padding: 0.5em 1em;
+    width: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */

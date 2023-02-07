@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $Lightgray;
+  font-size: 16px;
+  font-family: $primary-font;
+}
+.container {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  .wrapper {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    justify-items: flex-end;
+    .commentWrapper {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .chatBubbleChild {
+      width: 90%;
+      border-radius: 0.4em;
+      background-color: $White;
+      display: flex;
+      gap: 2em;
+      padding: 1.5em;
+      margin-top: 2em;
+    }
+
+    .hr {
+      width: 10%;
+      display: flex;
+      justify-content: center;
+      div {
+        width: 2px;
+        background-color: $GrayishBlue;
+        opacity: 0.2;
+      }
+    }
+    .chatBubble {
+      width: 100%;
+      border-radius: 0.4em;
+      background-color: $White;
+      display: flex;
+      gap: 2em;
+      padding: 1.5em;
+    }
+    .counter {
+      background-color: $Verylightgray;
+      padding: 0.7em 0.5em;
+      gap: 1.3em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 0.5em;
+      height: fit-content;
+      span {
+        color: $Moderateblue;
+        font-size: 1.2em;
+        font-weight: 700;
+      }
+    }
+    .details {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      flex-grow: 1;
+
+      .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1em;
+          img {
+            width: 2.5em;
+          }
+          :nth-child(2) {
+            color: $Darkblue;
+            font-weight: 700;
+          }
+          :nth-child(3) {
+            font-weight: 400;
+            color: $GrayishBlue;
+          }
+        }
+        .right {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5em;
+          span {
+            color: $Moderateblue;
+            font-weight: 500;
+          }
+          div:hover {
+            opacity: 0.5;
+          }
+        }
+        .hover:hover {
+          opacity: 0.5;
+        }
+      }
+      p {
+        color: $GrayishBlue;
+        line-height: 1.5em;
+        .hashTag {
+          font-weight: 700;
+          color: $Moderateblue;
+        }
+      }
+    }
+    .writeComment {
+      display: flex;
+      align-items: flex-start;
+      gap: 2em;
+      width: 100%;
+      background-color: $White;
+      padding: 1.5em;
+      border-radius: 0.4em;
+      justify-content: space-between;
+      img {
+        width: 2.5em;
+      }
+      textarea {
+        flex-grow: 1;
+        border-radius: 0.4em;
+        resize: none;
+        padding: 1em;
+        // font-size: 1.3em;
+        height: 7pc;
+        border: 1px solid rgba($color: $GrayishBlue, $alpha: 0.3);
+        &::placeholder {
+          font-size: 1.2em;
+          font-weight: 400;
+          font-family: $primary-font;
+        }
+      }
+      button {
+        border-radius: 0.4em;
+        padding: 1em 2.5em;
+        border: none;
+        background-color: $Moderateblue;
+        color: $White;
+        font-size: 1em;
+        font-weight: 700;
+      }
+    }
+    .writeCommentChild{
+      width: 90%;
+    }
+  }
+  .margin {
+    margin-top: 2em !important;
+  }
+}
+.hidden{
+  display: none !important;
+}
+.w-100{
+  width: 100% !important;
+  display: flex;
+}
+
+@media screen and (max-width: 900px){
+  body{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+justify-content: center;
+  }
+  .container{
+    height: fit-content;
+    width: 100%;
+    .wrapper{
+      width: 100%;
+      .details{ .title{flex-direction: column;gap: 1em; align-items: flex-start;}}
+      .commentWrapper{
+        
+        width: 90%;
+        margin: auto;
+      }
+      .writeComment{
+        flex-wrap: wrap;
+
+        gap: 1em;
+        textarea{
+          width: 50%;
+        }
+        button{
+        padding:0.5em 1em;
+        // font-size: 10px;
+        width: 100%;
+      }
+    }
+    }
+    
+  }
+}
